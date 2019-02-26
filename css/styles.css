@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+* {
+  font-family: 'Nunito', sans-serif;
+  color: #333333;
+}
+
+h1, h2, li {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.top {
+  /* border: 1px solid black; /* for debugging */
+  padding: 5px;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.capitalized {
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  font-size: 98%;
+}
+
+header, footer {
+  /* border: 1px solid black; /* for debugging */
+  background-color: #f7f7f7;
+}
+
+.introduction, .colorPre, .conclusion {
+  color: #6b6b6b;
+}
+
+.colorPost {
+  color: #6b6b6b;/* #828282; */
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.portfolioText {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.bottom {
+  display: inline-block;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.name {
+  margin-top: 0;
+  margin-left: 10px;
+  float: left;
+}
+
+.back {
+  margin-right: 10px;
+  float: right;
+}
+
+.contact {
+  padding-bottom: 25px;
+}
+
+.contact li {
+  padding: 5px 0;
+}
+
+.small {
+  margin: 20px 0;
+}
+
+/* min-width means starting point, max-width means ending point */
+@media (min-width: 418px) and (max-width: 576px) {
+  .top {
+    background-color: white;
+    margin: 5px 10px;
+  }
+  .profile {
+    padding-top: 25px;
+  }
+  .introduction, .conclusion {
+    text-align: center;
+    padding: 0 5px;
+  }
+  header, footer {
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+  body {
+    /* For debugging */
+    /* background-color: green; */
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    /* For debugging */
+    /* background-color: red; */
+  }
+  header {
+    padding-top: 5px;
+  }
+  .top {
+    display: inline;
+  }
+  .medium {
+    padding: 40px 0;
+    display: inline-block;
+    width: 95%;
+  }
+  .profile {
+    float: right;
+    height: 50%;
+    width: 50%;
+    margin: 0 -18px; /* top/bottom left/right */
+  }
+  .introduction {
+    float: left;
+    width: 50%;
+    margin-left: 18px;
+    margin-right: 5px;
+    /* border: solid 1px black; /* for debugging */
+  }
+  .title {
+    padding: 23px 0;
+  }
+  .portfolioImage {
+    width: 95%;
+  }
+  .first, .second, .third {
+    display: inline-block;
+    width: 100%;
+  }
+  .firstArticle {
+    float: left;
+    width: 50%;
+  }
+  .secondArticle {
+    float: right;
+    width: 50%;
+  }
+  footer {
+    padding: 40px 0;
+  }
+  .small {
+    margin-top: -3px;
+  }
+  .conclusion {
+    margin: 0 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    /* For debugging */
+    background-color: blue;
+  }
+}
