@@ -40,7 +40,7 @@ header, footer {
 }
 
 .colorPost {
-  color: #6b6b6b;/* #828282; */
+  color: #6b6b6b;
 }
 
 img {
@@ -96,6 +96,9 @@ img {
     background-color: white;
     margin: 5px 10px;
   }
+  .topDown {
+    display: none;
+  }
   .profile {
     padding-top: 25px;
   }
@@ -123,6 +126,14 @@ img {
   }
   .top {
     display: inline;
+  }
+  .topDown {
+    margin-top: -15px;
+    float: right;
+    font-size: 98%;
+  }
+  .change {
+    display: none;
   }
   .medium {
     padding: 40px 0;
@@ -167,13 +178,50 @@ img {
     margin-top: -3px;
   }
   .conclusion {
-    margin: 0 50px;
+    margin: 25px 50px;
   }
 }
 
 @media (min-width: 768px) {
   body {
     /* For debugging */
-    background-color: blue;
+    /* background-color: blue; */
+  }
+  .largeHeader {
+    width: 100%;
+  }
+  .nameTop {
+    float: left;
+    margin-left: 18px;
+  }
+  /* .topUp ul {
+    float: right;
+    margin-top: 30px;
+    padding-right: 26px;
+    margin-left: 2px;
+  } */
+  .topUp {
+    float: right;
+    margin-top: 41px;
+    margin-right: 24px;
+  }
+  .introduction {
+    font-size: 120%;
+  }
+  .profile {
+    width: 45%;
+    height: 45%;
+  }
+  .first, .second, .third {
+    display: inline-block;
+    width: 100%;
+  }
+  .firstArticle {
+    float: left;
+    width: 33%;
+  }
+  .secondArticle {
+    float: right;
+    width: 33%;
   }
 }
