@@ -5,16 +5,12 @@
   color: #333333;
 }
 
-h1, h2, li {
+h1, h2, li, .conclusion, .topNav {
   text-align: center;
 }
 
 li {
   list-style-type: none;
-}
-
-.top {
-  /* border: 1px solid black; /* for debugging */
   padding: 5px;
   margin: 5px;
 }
@@ -24,7 +20,7 @@ a {
   font-weight: bold;
 }
 
-.capitalized {
+.uppercase {
   font-family: 'Nunito', sans-serif;
   text-transform: uppercase;
   font-size: 98%;
@@ -35,11 +31,11 @@ header, footer {
   background-color: #f7f7f7;
 }
 
-.introduction, .colorPre, .conclusion {
+.introduction, .method, .conclusion {
   color: #6b6b6b;
 }
 
-.colorPost {
+.info {
   color: #6b6b6b;
 }
 
@@ -68,14 +64,13 @@ img {
 }
 
 .name {
+  float: left;
   margin-top: 0;
   margin-left: 10px;
-  float: left;
 }
 
-.back {
-  margin-right: 10px;
-  float: right;
+.smallDisplay {
+  margin: 20px 0;
 }
 
 .contact {
@@ -86,25 +81,41 @@ img {
   padding: 5px 0;
 }
 
-.small {
-  margin: 20px 0;
+.method {
+  background-color: #f7f7f7;
+}
+
+.backToTop {
+  background-color: #f7f7f7;
+  float: right;
+  margin-top: -2px;
+  margin-right: 10px;
 }
 
 /* min-width means starting point, max-width means ending point */
 @media (min-width: 418px) and (max-width: 576px) {
-  .top {
+  li {
     background-color: white;
     margin: 5px 10px;
   }
-  .topDown {
+  .headerNav {
+    margin-left: -40px
+  }
+  .hidden {
     display: none;
   }
-  .profile {
+  .bottomNav {
+    display: none;
+  }
+  .profilePic {
     padding-top: 25px;
   }
   .introduction, .conclusion {
     text-align: center;
     padding: 0 5px;
+  }
+  .portfolioLarge {
+    display: none;
   }
   header, footer {
     padding: 10px 0;
@@ -124,23 +135,27 @@ img {
   header {
     padding-top: 5px;
   }
-  .top {
+  li {
     display: inline;
   }
-  .topDown {
+  .hidden {
+    display: none;
+  }
+  .bottomNav {
     margin-top: -15px;
     float: right;
     font-size: 98%;
   }
-  .change {
+  .backToTop {
+    /*backToTopDisplay? */
     display: none;
   }
-  .medium {
+  .mediumDisplay {
     padding: 40px 0;
     display: inline-block;
     width: 95%;
   }
-  .profile {
+  .profilePic {
     float: right;
     height: 50%;
     width: 50%;
@@ -148,7 +163,7 @@ img {
   }
   .introduction {
     float: left;
-    width: 50%;
+    width: 45%;
     margin-left: 18px;
     margin-right: 5px;
     /* border: solid 1px black; /* for debugging */
@@ -159,7 +174,7 @@ img {
   .portfolioImage {
     width: 95%;
   }
-  .first, .second, .third {
+  .firstRow, .secondRow, .thirdRow {
     display: inline-block;
     width: 100%;
   }
@@ -171,21 +186,29 @@ img {
     float: right;
     width: 50%;
   }
+  .portfolioLarge {
+    display: none;
+  }
   footer {
     padding: 40px 0;
   }
-  .small {
+  .smallDisplay {
     margin-top: -3px;
   }
   .conclusion {
     margin: 25px 50px;
   }
+  .method {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
   body {
-    /* For debugging */
-    /* background-color: blue; */
+    border: 25px solid #f7f7f7;
+  }
+  .portfolio {
+    background-color: white;
   }
   .largeHeader {
     width: 100%;
@@ -194,33 +217,46 @@ img {
     float: left;
     margin-left: 18px;
   }
-  /* .topUp ul {
+  .showing {
+    display: none;
+  }
+  .hidden {
+    display: inline-block;
+  }
+  .topNav {
     float: right;
-    margin-top: 30px;
-    padding-right: 26px;
-    margin-left: 2px;
-  } */
-  .topUp {
-    float: right;
-    margin-top: 41px;
-    margin-right: 24px;
+    margin-top: 38px; /* 41px */
+    margin-right: 10px;
   }
   .introduction {
     font-size: 120%;
   }
-  .profile {
+  .profilePic {
     width: 45%;
     height: 45%;
+    margin-right: -30px;
   }
-  .first, .second, .third {
+  .portfolioSmall {
+    display: none;
+  }
+  .portfolioLarge {
+    border: 10px solid white;
     display: inline-block;
+  }
+  .firstRow, .secondRow {
+    display: flex;
     width: 100%;
   }
   .firstArticle {
     float: left;
     width: 33%;
   }
-  .secondArticle {
+  .secondArticleLarge {
+    margin-right: auto;
+    margin-left: auto;
+    width: 33%;
+  }
+  .thirdArticle {
     float: right;
     width: 33%;
   }
