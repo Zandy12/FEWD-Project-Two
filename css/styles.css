@@ -13,6 +13,8 @@ li {
   list-style-type: none;
   padding: 5px;
   margin: 5px;
+  background-color: white;
+  margin: 5px 10px;
 }
 
 a {
@@ -29,6 +31,8 @@ a {
 header, footer {
   /* border: 1px solid black; /* for debugging */
   background-color: #f7f7f7;
+  padding: 10px 0;
+  margin: 10px 0;
 }
 
 .introduction, .method, .conclusion {
@@ -92,42 +96,39 @@ img {
   margin-right: 10px;
 }
 
-/* min-width means starting point, max-width means ending point */
-@media (min-width: 418px) and (max-width: 576px) {
-  li {
-    background-color: white;
-    margin: 5px 10px;
-  }
-  .headerNav {
+.headerNav {
     margin-left: -40px
-  }
-  .hidden {
-    display: none;
-  }
-  .bottomNav {
-    display: none;
-  }
-  .profilePic {
-    padding-top: 25px;
-  }
-  .introduction, .conclusion {
-    text-align: center;
-    padding: 0 5px;
-  }
-  .portfolioLarge {
-    display: none;
-  }
-  header, footer {
-    padding: 10px 0;
-    margin: 10px 0;
-  }
-  body {
-    /* For debugging */
-    /* background-color: green; */
-  }
 }
 
-@media (min-width: 576px) {
+.hidden {
+    display: none;
+}
+
+.bottomNav {
+    display: none;
+}
+
+.profilePic {
+    padding-top: 25px;
+}
+
+.introduction, .conclusion {
+    text-align: center;
+    padding: 0 5px;
+}
+
+.portfolioLarge {
+    display: none;
+}
+
+body {
+    /* For debugging */
+    /* background-color: green; */
+}
+
+/* min-width means starting point, max-width means ending point */
+
+@media (min-width: 768px) {
   body {
     /* For debugging */
     /* background-color: red; */
@@ -137,11 +138,13 @@ img {
   }
   li {
     display: inline;
+    background-color: #f7f7f7;
   }
   .hidden {
     display: none;
   }
   .bottomNav {
+    display: inline-block;
     margin-top: -15px;
     float: right;
     font-size: 98%;
@@ -162,6 +165,7 @@ img {
     margin: 0 -18px; /* top/bottom left/right */
   }
   .introduction {
+    text-align: left;
     float: left;
     width: 45%;
     margin-left: 18px;
@@ -203,9 +207,15 @@ img {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   body {
     border: 25px solid #f7f7f7;
+  }
+  header {
+    margin-top: 0px;
+  }
+  footer {
+    margin-bottom: 0px;
   }
   .portfolio {
     background-color: white;
